@@ -24,6 +24,7 @@ int main(){
         cin>>angle;
         
         //多边形的外角和等于360度
+        //所以正多边形的外角一定要能被360整除
         if(360%(180-angle)==0) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
