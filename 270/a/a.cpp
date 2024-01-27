@@ -22,6 +22,8 @@ int main(){
     for(int i=0;i<n;++i){
         int angle;
         cin>>angle;
+        
+        //多边形的外角和等于360度
         if(360%(180-angle)==0) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
