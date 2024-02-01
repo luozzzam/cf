@@ -1,10 +1,4 @@
 #include<iostream>
-#include<cstring>
-#include<cstdio>
-#include<cmath>
-#include<string>
-#include<vector>
-#include<algorithm>
 
 using namespace std;
 
@@ -15,21 +9,26 @@ int T;
 int n,m;
 int arr[N];
 char s[N];
-int st[26];
+int state[26];
 
 int main(){
     cin>>n;
-    cin>>s+1;
+    cin>>(s+1);
 
     // cout<<s+1<<endl;
     for(int i=1;i<=n;++i){
-        if(s[i]>='A'&&s[i]<='Z') st[s[i]-'A']++;
-        else st[s[i]-'a']++;
+        if(s[i]>='A'&&s[i]<='Z'){
+            state[s[i]-'A']++;
+        }
+        
+        else{
+            state[s[i]-'a']++;
+        }
     }
 
     int code=1;
     for(int i=0;i<26;++i){
-        if(st[i]==0) code=0;
+        if(state[i]==0) code=0;
     }
 
 
